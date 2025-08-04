@@ -3,3 +3,38 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+:root{
+    --bg-image-:null;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    background-image: var(--bg-image-);
+}
+
+.container {
+    height: 10%;
+    width: 45%;
+    display: grid;
+    gap: 12px;
+}
+
+.container input {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.botoes{
+    display: grid;
+    grid-template-areas: 
+    "f1 f2";
+    grid-template-rows: 100% 100%;
+    grid-template-columns: 50% 50%;
+}
+
+.container button {
+    padding: 12px;
+}
