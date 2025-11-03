@@ -4,31 +4,45 @@
     box-sizing: border-box;
 }
 
-:root{
-    --bg-image-:null;
-}
-
 body {
     display: grid;
     place-items: center;
     height: 100vh;
-    background-image: var(--bg-image-);
+    width: 100vw;
 }
 
 .container {
     height: 10%;
-    width: 45%;
+    width: 100%;
     display: grid;
     gap: 12px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
 
 .container input {
     font-size: 2rem;
     text-align: center;
+    width: 100%;
+    background-color: rgb(24, 24, 90);
+    border: 0;
+    outline: 0;
+    color: rgb(150, 130, 177);
+    transition: 0.5s;
+}
+
+.container input:hover{
+    background-color: rgb(35, 19, 51);
+}
+
+::-webkit-input-placeholder {
+   color: rgb(150, 130, 177);
 }
 
 .botoes{
     display: grid;
+    width: 100%;
     grid-template-areas: 
     "f1 f2";
     grid-template-rows: 100% 100%;
@@ -37,4 +51,52 @@ body {
 
 .container button {
     padding: 12px;
+    background-color: rgb(71, 71, 168);
+    border: 0;
+    transition: 0.5s;
+    margin-inline: 5px;
+}
+
+.container button:hover{
+    background-color: rgb(25, 25, 104);
+}
+
+.container img {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    z-index: -2;
+    position: absolute;
+}
+
+@keyframes slider {
+    0%, 16% {
+        background-image: url(./img/Finalistas.jpg);
+    }
+    17%, 33% {
+        background-image: url(./img/SemiFinalistas.jpg);
+    }
+    34%, 50% {
+        background-image: url(./img/BispoEdirMacedo-ChicoAnysio.jpg);
+    }
+    51%, 67% {
+        background-image: url(./img/RonaldoFenomeno.jpg);
+    }
+    68%, 84% {
+        background-image: url(./img/JoseDeElencar-RobertoCarlos-ZildaArns-DencyGoncalves.jpg);
+    }
+    85%, 100% {
+        background-image: url(./img/Neymar.jpg);
+    }
+}
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    15%, 85% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
 }
